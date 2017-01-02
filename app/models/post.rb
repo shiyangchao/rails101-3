@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :posts
+  belongs_to :group
+
+  validates :content, presence: true
 end
